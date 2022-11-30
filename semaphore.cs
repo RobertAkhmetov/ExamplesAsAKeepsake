@@ -3,12 +3,12 @@
 using System.Threading; //Именно это пространство имен поддерживает многопоточность
 
 namespace ConsoleApp2
-{// запускаем пять потоков
+{
     class Progaram
     {
         public static void Main()
         {
-            for (int i = 1; i < 6; i++)
+            for (int i = 1; i < 6; i++)// запускаем пять потоков
             {
                 Reader reader = new Reader(i);
             }
@@ -34,7 +34,7 @@ namespace ConsoleApp2
         {
             while (count > 0)
             {
-                sem.WaitOne();  // ожидаем, когда освободиться место
+                sem.WaitOne();  // ожидаем, когда освободится место
 
                 Console.WriteLine($"{Thread.CurrentThread.Name} входит в библиотеку");
 
