@@ -58,8 +58,17 @@ namespace ConsoleApp6
 
             Console.WriteLine(differentTable1Table2.Average(x=>x.Value));
 
+            var mixedDict = from rt in ratingTable1     //делаем производный словарь из наших словарей
+                            from p in people
+                            select new
+                            {
+                                name = rt.Key,
+                                secondName = people[0]
+                            };
+            foreach (var mlex in mixedDict)
+                Console.WriteLine(mlex);
 
-
+            Console.Read();
         }
     }
 }
