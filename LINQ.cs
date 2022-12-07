@@ -56,6 +56,8 @@ namespace ConsoleApp6
             foreach (var d in differentTable1Table2)
                 Console.WriteLine(d);
 
+            Console.WriteLine(differentTable1Table2.Average(x=>x.Value));
+
 
 
         }
