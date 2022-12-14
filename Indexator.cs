@@ -37,12 +37,12 @@ namespace ConsoleApp7
             {
                 Person[] myPersonal = { new Person("Robert"), new Person("John"), new Person("Uri") };
                 Company myCompany = new Company(myPersonal);
-                Console.WriteLine(myCompany[0].Name);
+                Console.WriteLine(myCompany[0].Name); //-->Robert
 
                 myCompany[0] = new Person("Henry"); //перезапишем по 0му индексу новую персону
-                Console.WriteLine(myCompany[0].Name);
+                Console.WriteLine(myCompany[0].Name);//-->Henry
 
-                Console.WriteLine(myCompany["special"].Name); //воспользуемся специальным, не ИНТовым индексом
+                Console.WriteLine(myCompany["special"].Name); //воспользуемся специальным, не ИНТовым индексом -->special
             }
         }
     }
