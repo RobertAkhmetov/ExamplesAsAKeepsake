@@ -10,7 +10,7 @@ namespace ConsoleApp2
         {
             Thread myThread = new Thread(func); //Создаем новый объект потока (Thread)
 
-            myThread.IsBackground = true;
+            // myThread.IsBackground = true; //пока не дает остановки данного потока при выполнении основного
             myThread.Start(); //запускаем поток
 
             
