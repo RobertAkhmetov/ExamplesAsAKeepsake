@@ -49,6 +49,8 @@ namespace ConsoleApp6
             var topFromTable = ratingTable1.Where(t => t.Value > 3).OrderByDescending(t => t.Value); //тоже самое, только по уменьшению значения
 
             var differentTable1Table2 = ratingTable1.Except(ratingTable2); //только те элементы 1 словаря, которых нет во второй
+            var similarTable1Table2 = ratingTable1.Intersect(ratingTable2); //только пересекающиеся - схожие элементы из словарей
+            var sovietUnionT1T2 = ratingTable1.Union(ratingTable2); //объеденить 2 словаря, повторяющиеся элементы добавить только один раз
 
             foreach (var t in topFromTable)
                 Console.WriteLine(t);
