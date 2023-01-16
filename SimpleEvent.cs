@@ -12,7 +12,7 @@ namespace ConsoleApp6
 
             public EnteredLetters()
             {
-                Notify += showEvent1;  //notify носит формат handler, к таким "приплюсовывают" конкретные действия об извещении
+                Notify += showEvent1;  //notify носит формат handler, к таким "приплюсовывают" конкретные функции - действия об извещении
                 Notify += delegate     //добавим так же анонимный делегат
                 {
                     Console.WriteLine("анонимный делегат");
